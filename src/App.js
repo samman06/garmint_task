@@ -5,6 +5,7 @@ import store from './store';
 import './App.css';
 import businesses from "./components/businesses/Businesses";
 import BusinessesData from "./components/businesses/moreInfo";
+import Nav from "./components/layout/Nav";
 
 class App extends Component {
     render() {
@@ -12,7 +13,9 @@ class App extends Component {
             <Provider store={store}>
                 <BrowserRouter>
                     <div className="App">
+                        <Route path='/' exact component={Nav}/>
                         <Route path='/' exact component={businesses}/>
+                        <Route path='/:id' exact component={Nav}/>
                         <Route path='/:id' exact component={BusinessesData}/>
                     </div>
                 </BrowserRouter>
