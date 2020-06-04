@@ -19,12 +19,12 @@ class BusinessesData extends Component {
             businessesInfo =  (
                 <div key={business.id} className="card justify-content-around card-body col-12 m-3 bg-light mb-3">
                     <div className="row">
-                        <div className="col-3">
+                        <div className="col-12 col-md-12 col-lg-3">
                             <div className="mb-5">
                                 <img src={business.image_url} alt={business.image_url} width="100%" height="200px" className="rounded-circles"/>
                             </div>
                         </div>
-                        <div className="col-8">
+                        <div className="col-12 col-md-12 col-lg-8">
                             <Link to={`/${business.id}`}> <h3>{business.name}</h3></Link>
                             <h3>
                                 <span>

@@ -59,13 +59,13 @@ class Businesses extends Component {
                     errors={errors}
                 />
                 <div className="row">
-                    <div className="form-group col-2">
+                    <div className="col-12 col-md-5 col-lg-5 m-1">
                         <select className="form-control " name="price" onChange={this.onChange}>
                             <option value="0">Select Category</option>
                             {allPrice}
                         </select>
                     </div>
-                    <div className="form-group col-2">
+                    <div className="col-12 col-md-5 col-lg-5 m-1 ">
                         <button  className="form-control btn btn-warning mr-4"
                                 onClick={() => this.sort("name")}>
                             Sort
