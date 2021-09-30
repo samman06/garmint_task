@@ -6,4 +6,4 @@ before_install:
     - docker build -t samman/garmint .
 
 script:
-    - docker run samman/garmint npm run test -- --coverage
+    - docker run samman/garmint 
