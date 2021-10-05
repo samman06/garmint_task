@@ -17,7 +17,6 @@ class App extends Component {
                         <Route path='/' exact component={businesses}/>
                         <Route path='/:id' exact component={Nav}/>
                         <Route path='/:id' exact component={BusinessesData}/>
-                        <Route path='/samman' exact component={BusinessesData}/>
                     </div>
                 </BrowserRouter>
             </Provider>
