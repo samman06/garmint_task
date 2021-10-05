@@ -20,6 +20,7 @@ deploy:
   env: "Garment"
   bucket_name: "elasticbeanstalk-us-west-2-612578105731"
   bucket_path: "garment"
+  clean_up: false
   on:
     branch: master
   access_key_id: "$AWS_ACCESS_KEY"
