@@ -2,6 +2,8 @@ sudo: required
 services:
   - docker
 
+install: travis_wait mvn install
+
 before_install:
   - docker build -t samman/garment .
 
