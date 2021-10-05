@@ -14,16 +14,16 @@ script:
   - docker run -d -e CI=true samman/garment npm run test -- --coverage
 
 deploy:
-  skip_cleanup: true
-  clean_up: false
   provider: elasticbeanstalk
   region: "us-west-2"
   app: "garment"
   env: "Garment"
   bucket_name: "elasticbeanstalk-us-west-2-612578105731"
   bucket_path: "garment"
+  skip_cleanup: true
+  clean_up: false
   on:
     branch: master
-  access_key_id: "$AWS_ACCESS_KEY"
+  access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+    secure: $AWS_SECRET_KEY
