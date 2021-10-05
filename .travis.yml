@@ -1,14 +1,17 @@
 sudo: required
+
+language: node_js
+
+node_js:
+    - "stable"
 services:
   - docker
-
-install: travis_wait mvn install
 
 before_install:
   - docker build -t samman/garment .
 
 script:
-  - docker run samman/garment
+  - docker run -e CI=true samman/garment
 
 deploy:
   provider: elasticbeanstalk
